@@ -31,7 +31,7 @@ function changeState(data) {
 }
 function sendData(data) {
   const { temperature, humedity } = data;
-  https.get(`https://not-gamp-machine-api.herokuapp.com/set?t=${temperature}&h=${humedity}`,res => {
+  https.get(`https://not-gamp.herokuapp.com/set?t=${temperature}&h=${humedity}`,res => {
     console.log('statusCode:', res.statusCode);
   }).on('error', (e) => {
     console.error(e);
